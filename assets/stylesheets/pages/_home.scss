@@ -127,6 +127,33 @@
     }
 }
 
+.section-light-dark {
+    h1 {
+        font-family : $font-primary;
+
+        color : $color-dark;
+
+        @include sm {
+            font-size : rem(35) !important;
+        }
+        @include md {
+            font-size : rem(75) !important;
+        }
+    }
+    p {
+        font-family : $font-secondary;
+
+        color : $color-dark;
+
+        @include sm {
+            font-size : rem(18) !important;
+        }
+        @include md {
+            font-size : rem(22) !important;
+        }
+    }
+}
+
 
 .section-gris-dark {
     h1 {
