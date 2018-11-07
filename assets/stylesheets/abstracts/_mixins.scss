@@ -1,0 +1,121 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+@mixin hover {
+  &:hover { @content; }
+}
+
+@mixin hover-focus {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin plain-hover-focus {
+  &,
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin hover-focus-active {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}
+
+
+// convert px to rem
+@function rem($pixels, $context: $baseFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+// mixin pour les préfix
+@mixin prefix($map, $vendors: webkit khtml moz ms o) {
+  @each $prop, $value in $map {
+    @if $vendors {
+      @each $vendor in $vendors {
+        #{"-" + $vendor + "-" + $prop}: #{$value};
+      }
+    }
+    #{$prop}: #{$value};
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@mixin xs {
+   @media (max-width: $screen-sm) {
+       @content;
+   }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin sm {
+   @media (max-width: $screen-md) {
+       @content;
+   }
+}
+
+// Medium devices (tablets, 768px and up)
+@mixin md {
+   @media (min-width: $screen-md){
+       @content;
+   }
+}
+
+// Large devices (desktops, 992px and up)
+@mixin lg {
+   @media (min-width: $screen-lg) {
+       @content;
+   }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@mixin xl {
+   @media (min-width: $screen-xl) {
+       @content;
+   }
+}

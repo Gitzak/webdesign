@@ -1,0 +1,186 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+// White links against a dark background
+.navbar-dark {
+    .navbar-brand {
+        color : $color-light;
+
+        @include hover-focus {
+            color : $color-secondary;
+        }
+    }
+
+    .navbar-nav {
+        .nav-link {
+            margin-right : rem(15);
+            margin-left : rem(15);
+
+            color : $color-light-grey;
+
+            @include hover-focus {
+                color : $color-secondary;
+            }
+            &:focus {
+                color : $color-secondary;
+            }
+        }
+    }
+}
+
+.underline-navbar {
+    position : relative;
+
+    overflow : hidden;
+
+    @include prefix((transition: translateZ(0)), webkit ms o);
+    -webkit-backface-visibility : hidden;
+            backface-visibility : hidden;
+    -moz-osx-font-smoothing : grayscale;
+
+    &:before {
+        position : absolute;
+        z-index : -1;
+        right : 50%;
+        bottom : 0;
+        left : 50%;
+
+        height : rem(4);
+
+        content : '';
+
+        background : $color-secondary;
+
+        @include prefix((transition: all .3s ease-in), webkit ms o);
+    }
+
+    &:hover:before {
+        right : 0;
+        left : 0;
+    }
+}
+
+.bg_home {
+    background-image : url('../img/-1-bg_home.jpg');
+    background-repeat : no-repeat;
+    background-position : center center;
+    background-size : cover;
+}
+.arrow_down {
+    position : absolute;
+    bottom : rem(15);
+
+    width : rem(90);
+    height : rem(90);
+
+    -webkit-animation : bounce 2s infinite;
+       -moz-animation : bounce 2s infinite;
+            animation : bounce 2s infinite;
+
+    background-image : url('../img/svg/down-arrow.svg');
+    background-repeat : no-repeat;
+    background-position : center center;
+    background-size : 50%;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform : translateY(0);
+    }
+    40% {
+        transform : translateY(-30px);
+    }
+    60% {
+        transform : translateY(-15px);
+    }
+}
+
+.bg-dark {
+    background-color : #2f3032 !important;
+}
+
+.section-dark-light {
+    h1 {
+        font-family : $font-primary;
+
+        color : $color-light;
+
+        @include sm {
+            font-size : rem(35) !important;
+        }
+        @include md {
+            font-size : rem(75) !important;
+        }
+    }
+    p {
+        font-family : $font-secondary;
+
+        color : $color-light;
+
+        @include sm {
+            font-size : rem(20) !important;
+        }
+        @include md {
+            font-size : rem(25) !important;
+        }
+    }
+}
+
+
+.section-gris-dark {
+    h1 {
+        font-family : $font-primary;
+
+        color : $color-primary;
+
+        @include sm {
+            font-size : rem(35) !important;
+        }
+        @include md {
+            font-size : rem(75) !important;
+        }
+    }
+    p {
+        font-family : $font-secondary;
+
+        color : $color-primary;
+
+        @include sm {
+            font-size : rem(20) !important;
+        }
+        @include md {
+            font-size : rem(25) !important;
+        }
+    }
+}
+.space-x {
+    // height : rem(100);
+}
+.btn {
+    font-family : $font-secondary;
+    font-weight : 700;
+
+    letter-spacing : rem(3);
+
+    border-radius : 0;
+}
+.btn-primary {
+    border-color : $color-secondary;
+    background-color : $color-secondary;
+    &:hover, &:focus {
+        color : $color-secondary;
+        border-color : $color-light;
+        outline : none;
+        background-color : $color-light;
+        box-shadow : none !important;
+    }
+    &:active {
+        border-color : $color-secondary !important;
+        background-color : $color-secondary !important;
+    }
+}
+
+.bg_dark {
+    background-color : $bg-light-grey !important;
+}
