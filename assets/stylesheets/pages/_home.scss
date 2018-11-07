@@ -184,3 +184,8 @@
 .bg_dark {
     background-color : $bg-light-grey !important;
 }
+.card {
+    .card-text, a {
+        font-size : rem(20) !important;
+    }
+}

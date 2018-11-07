@@ -717,4 +717,8 @@ body {
   background-color: #eee !important;
 }
 
+.card .card-text, .card a {
+  font-size: 1.25rem !important;
+}
+
 /*# sourceMappingURL=main.css.map */
