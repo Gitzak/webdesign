@@ -632,60 +632,64 @@ body {
   background-color: #2f3032 !important;
 }
 
-.section-dark-light h1 {
+.section-dark-text-light h1 {
   font-family: "Roboto Mono", monospace;
   color: #fff;
 }
 @media (max-width: 768px) {
-  .section-dark-light h1 {
+  .section-dark-text-light h1 {
     font-size: 2.1875rem !important;
   }
 }
 @media (min-width: 768px) {
-  .section-dark-light h1 {
+  .section-dark-text-light h1 {
     font-size: 4.6875rem !important;
   }
 }
-.section-dark-light p {
+.section-dark-text-light p {
   font-family: "Muli", sans-serif;
   color: #fff;
 }
 @media (max-width: 768px) {
-  .section-dark-light p {
+  .section-dark-text-light p {
     font-size: 1.25rem !important;
   }
 }
 @media (min-width: 768px) {
-  .section-dark-light p {
+  .section-dark-text-light p {
     font-size: 1.5625rem !important;
   }
 }
 
-.section-light-dark h1 {
+.section-light-text-dark {
+  padding-top: 6.25rem !important;
+  padding-bottom: 6.25rem !important;
+}
+.section-light-text-dark h1 {
   font-family: "Roboto Mono", monospace;
   color: #2d2a2e;
 }
 @media (max-width: 768px) {
-  .section-light-dark h1 {
+  .section-light-text-dark h1 {
     font-size: 2.1875rem !important;
   }
 }
 @media (min-width: 768px) {
-  .section-light-dark h1 {
-    font-size: 4.6875rem !important;
+  .section-light-text-dark h1 {
+    font-size: 3.4375rem !important;
   }
 }
-.section-light-dark p {
+.section-light-text-dark p {
   font-family: "Muli", sans-serif;
   color: #2d2a2e;
 }
 @media (max-width: 768px) {
-  .section-light-dark p {
+  .section-light-text-dark p {
     font-size: 1.125rem !important;
   }
 }
 @media (min-width: 768px) {
-  .section-light-dark p {
+  .section-light-text-dark p {
     font-size: 1.375rem !important;
   }
 }
@@ -701,7 +705,7 @@ body {
 }
 @media (min-width: 768px) {
   .section-gris-dark h1 {
-    font-size: 4.6875rem !important;
+    font-size: 4.0625rem !important;
   }
 }
 .section-gris-dark p {
