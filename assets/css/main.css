@@ -729,7 +729,7 @@ body {
 }
 
 .btn {
-  font-family: "Muli", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-weight: 700;
   letter-spacing: 0.1875rem;
   border-radius: 0;
@@ -747,6 +747,22 @@ body {
   box-shadow: none !important;
 }
 .btn-primary:active {
+  border-color: #706fd3 !important;
+  background-color: #706fd3 !important;
+}
+
+.btn-outline-primary {
+  font-size: 1.125rem;
+  color: #706fd3;
+  border-color: #706fd3;
+}
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+  color: #fff;
+  outline: none;
+  background-color: #706fd3;
+  box-shadow: none !important;
+}
+.btn-outline-primary:active {
   border-color: #706fd3 !important;
   background-color: #706fd3 !important;
 }

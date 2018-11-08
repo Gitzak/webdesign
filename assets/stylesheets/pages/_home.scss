@@ -188,7 +188,7 @@
     }
 }
 .btn {
-    font-family : $font-secondary;
+    font-family : $font-primary;
     font-weight : 700;
 
     letter-spacing : rem(3);
@@ -203,6 +203,21 @@
         border-color : $color-light;
         outline : none;
         background-color : $color-light;
+        box-shadow : none !important;
+    }
+    &:active {
+        border-color : $color-secondary !important;
+        background-color : $color-secondary !important;
+    }
+}
+.btn-outline-primary {
+    font-size: rem(18);
+    color : $color-secondary;
+    border-color : $color-secondary;
+    &:hover, &:focus {
+        color : $color-light;
+        outline : none;
+        background-color : $color-secondary;
         box-shadow : none !important;
     }
     &:active {

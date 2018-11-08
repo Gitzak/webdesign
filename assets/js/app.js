@@ -31,7 +31,7 @@ var typed = new Typed('.typed', {
 	// callback for reset
 	resetCallback: function() {}
 });
-
+// --------------ScrollTo--------------------------------------
 $('.js-scroll').on('click', function(event) {
   event.preventDefault();
   var target = $(this).data('scrollTo');
@@ -39,7 +39,8 @@ $('.js-scroll').on('click', function(event) {
     scrollTop: $(target).offset().top
   }, 800);
 });
-
+// ------------------------------------------------------------
+// --------------Isotope---------------------------------------
 // init Isotope
 var $grid = $('.grid').isotope({
   // options
@@ -49,3 +50,4 @@ $('.filter-button-group').on( 'click', 'button', function() {
   var filterValue = $(this).attr('data-filter');
   $grid.isotope({ filter: filterValue });
 });
+// ------------------------------------------------------------
