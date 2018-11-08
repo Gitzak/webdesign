@@ -101,6 +101,8 @@
 }
 
 .section-dark-text-light {
+    background-color : $color-dark;
+
     h1 {
         font-family : $font-primary;
 
@@ -188,7 +190,7 @@
     }
 }
 .btn {
-    font-family : $font-primary;
+    font-family : $font-secondary;
     font-weight : 700;
 
     letter-spacing : rem(3);
@@ -211,7 +213,8 @@
     }
 }
 .btn-outline-primary {
-    font-size: rem(18);
+    font-size : rem(16) !important;
+
     color : $color-secondary;
     border-color : $color-secondary;
     &:hover, &:focus {
@@ -225,15 +228,14 @@
         background-color : $color-secondary !important;
     }
 }
-
 .bg_dark {
     background-color : $bg-light-grey !important;
 }
-.card {
-    .card-text, a {
-        font-size : rem(20) !important;
-    }
-}
+// .card {
+//     .card-text, a {
+//         font-size : rem(16) !important;
+//     }
+// }
 .card-shadow {
     box-shadow : 0 10px 18px rgba(0, 0, 0, .18);
 

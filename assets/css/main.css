@@ -632,6 +632,9 @@ body {
   background-color: #2f3032 !important;
 }
 
+.section-dark-text-light {
+  background-color: #2d2a2e;
+}
 .section-dark-text-light h1 {
   font-family: "Roboto Mono", monospace;
   color: #fff;
@@ -729,7 +732,7 @@ body {
 }
 
 .btn {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Muli", sans-serif;
   font-weight: 700;
   letter-spacing: 0.1875rem;
   border-radius: 0;
@@ -752,7 +755,7 @@ body {
 }
 
 .btn-outline-primary {
-  font-size: 1.125rem;
+  font-size: 1rem !important;
   color: #706fd3;
   border-color: #706fd3;
 }
@@ -769,10 +772,6 @@ body {
 
 .bg_dark {
   background-color: #eee !important;
-}
-
-.card .card-text, .card a {
-  font-size: 1.25rem !important;
 }
 
 .card-shadow {

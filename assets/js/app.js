@@ -51,3 +51,24 @@ $('.filter-button-group').on( 'click', 'button', function() {
   $grid.isotope({ filter: filterValue });
 });
 // ------------------------------------------------------------
+// --------------owlCarousel---------------------------------------
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    center: false,
+    dots: false,
+    items:6,
+    margin:50,
+    nav:false,
+    autoWidth:true,
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:2
+        },
+        1200:{
+            items:6
+        }
+    }
+});
